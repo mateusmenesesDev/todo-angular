@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: hsl(0, 0%, 98%);
+  height: 100vh;
+}
+
+html.dark body {
+  background-color: hsl(235, 21%, 11%)
+}

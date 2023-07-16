@@ -1,0 +1,9 @@
+<input 
+  type="text"
+  placeholder="Criar nova tarefa" 
+  class="p-2 rounded-md w-full dark:bg-gray-500"
+  [ngModel]="inputRef"
+  (ngModelChange)="onChange($event)"
+  (keydown)="onKeyDown($event)"
+/>
+

@@ -1,0 +1,17 @@
+<div class="rounded-md overflow-auto shadow-lg mb-3 text-light-dark-grayish dark:text-dark-light-grayish h-[50vh] dark:bg-dark-desaturated bg-white font-semibold">
+  <div *ngFor="let todo of todoList" class="flex p-4 justify-between border-b border-[#f3f3f3]">
+      <label class='flex gap-4' >
+        <input *ngIf='!todo.completed' type="checkbox" (change)="handleComplete($event, todo)" >
+        <img 
+          src="../../../assets/images/icon-check.svg" 
+          *ngIf='todo.completed' 
+          alt="Tarefa concluída icone" 
+          class="w-8"
+        >
+        {{ todo.name }}
+      </label>
+    <button (click)="handleRemove(todo)">X</button>
+  </div>
+</div>
+<app-todo-filters (changeFilter)="changeFilter($event)"></app-todo-filters>
+
